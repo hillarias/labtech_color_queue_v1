@@ -18,7 +18,7 @@ sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 st.image('https://ginsbergs.com/wp-content/uploads/2021/08/Beyond-Meat-Logo.png', width=300)
-st.header('Beyond Meat Color Team Formulation Queue')
+st.header('Color Team Formulation Queue')
 
 
 # Print results.

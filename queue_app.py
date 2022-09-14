@@ -31,21 +31,21 @@ rec_index = 1
 # Print results.
 for row in rows:
     
-    curr = row.FORMULATION + " submitted by " + row.PERSON
+    curr = row.FORMULATION + " submitted by " + row.PERSON_SUBMITTED
     
     if row.RECEIVED == 'NO':
-        curr = str(rec_index) + ") " + row.FORMULATION + " submitted by " + row.PERSON 
+        curr = str(rec_index) + ") " + row.FORMULATION + " submitted by " + row.PERSON_SUBMITTED 
         rec_index += 1
         received.append(curr)
     
     
         
     elif row.COMPLETE == 'NO': 
-        curr =  row.FORMULATION + " submitted by " + row.PERSON + ' - ' + row.LAB_TECH
+        curr =  row.FORMULATION + " submitted by " + row.PERSON_SUBMITTED + ' - ' + row.LAB_TECH
         
         in_prog.append(curr)
     else: 
-        curr =  row.FORMULATION + " submitted by " + row.PERSON + ' - ' + row.LAB_TECH
+        curr =  row.FORMULATION + " submitted by " + row.PERSON_SUBMITTED + ' - ' + row.LAB_TECH
         completed.append(curr)
 
         

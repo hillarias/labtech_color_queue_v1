@@ -23,15 +23,25 @@ st.image('https://ginsbergs.com/wp-content/uploads/2021/08/Beyond-Meat-Logo.png'
 st.header('Color Team Formulation Queue')
 st.subheader('In progress...')
 
-
+in_prog = []
+completed = []
 
 # Print results.
 for row in rows:
+    
+    curr = row.FORMULATION + " submitted by " + row.PERSON
     if (row.COMPLETE == 'NO'): 
-        st.write(row.FORMULATION + " submitted by " + row.PERSON) 
+        in_prog.append(curr)
     else: 
-        st.subheader('COMPLETED')
-        st.write(row.FORMULATION + " submitted by " + row.PERSON) 
+        completed.append(curr)
+st.subheader('IN PROGRESS')
+st.write(in_prog)
+
+st.subheader('COMPLETE')
+st.write(completed)
+
+
+
         
 
     

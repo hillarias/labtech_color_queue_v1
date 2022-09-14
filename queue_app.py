@@ -42,25 +42,34 @@ for row in rows:
     else: 
         completed.append(curr)
 
-rec_header  = '<p style="font-family:Arial; color:Grey; font-size: 25px;">Received</p>'
-st.markdown(rec_header, unsafe_allow_html=True)
-for entry in received:
-    st.write(entry)
+        
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    rec_header  = '<p style="font-family:Arial; color:Grey; font-size: 25px;">Received</p>'
+    st.markdown(rec_header, unsafe_allow_html=True)
+    for entry in received:
+        st.write(entry)
+
+with col2:
+    prog_header  = '<p style="font-family:Arial; color:Green; font-size: 25px;">In Progress</p>'
+    st.markdown(prog_header, unsafe_allow_html=True)
+    for entry in in_prog:
+        st.write(entry)
+   
+
+with col3:
+    comp_header = '<p style="font-family:Arial; color:Blue; font-size: 25px;">Completed</p>'
+    st.markdown(comp_header, unsafe_allow_html = True)
+    for entry in completed:
+        st.write(entry)
+
+           
+        
+        
+
         
         
         
-prog_header  = '<p style="font-family:Arial; color:Green; font-size: 25px;">In Progress</p>'
-st.markdown(prog_header, unsafe_allow_html=True)
-for entry in in_prog:
-    st.write(entry)
-
-comp_header = '<p style="font-family:Arial; color:Blue; font-size: 25px;">Completed</p>'
-st.markdown(comp_header, unsafe_allow_html = True)
-for entry in completed:
-    st.write(entry)
 
 
-
-        
-
-    

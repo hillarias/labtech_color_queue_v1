@@ -46,7 +46,7 @@ for row in rows:
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    rec_header  = '<p style="font-family:Arial; color:Grey; font-size: 25px;">Received</p>'
+    rec_header  = '<p style="font-family:Arial;text-align: center; color: Grey;; font-size: 25px;">Received</p>'
     st.markdown(rec_header, unsafe_allow_html=True)
     for entry in received:
         st.write(entry)

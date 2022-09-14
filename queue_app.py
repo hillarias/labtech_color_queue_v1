@@ -35,10 +35,12 @@ for row in rows:
     else: 
         completed.append(curr)
 st.subheader('IN PROGRESS')
-st.write(in_prog)
+for entry in in_prog:
+    st.write(entry)
 
 st.subheader('COMPLETE')
-st.write(completed)
+for entry in completed:
+    st.write(entry)
 
 
 

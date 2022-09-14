@@ -24,6 +24,15 @@ st.header('Color Team Formulation Queue')
 st.subheader('In progress...')
 
 
+
 # Print results.
 for row in rows:
-   st.write(row.FORMULATION + " submitted by " + row.PERSON) 
+   if row.COMPLETED == 'NO': 
+    st.write(row.FORMULATION + " submitted by " + row.PERSON) 
+   
+   else: 
+        st.subheader('COMPLETED')
+        st.write(row.FORMULATION + " submitted by " + row.PERSON) 
+        
+
+    

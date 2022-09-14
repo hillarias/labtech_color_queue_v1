@@ -37,12 +37,14 @@ for row in rows:
         rec_index += 1
         received.append(curr)
     
-    curr =  row.FORMULATION + " submitted by " + row.PERSON + '-' + row.LAB_TECH
+    
         
     elif row.COMPLETE == 'NO': 
+        curr =  row.FORMULATION + " submitted by " + row.PERSON + '-' + row.LAB_TECH
         
         in_prog.append(curr)
     else: 
+        curr =  row.FORMULATION + " submitted by " + row.PERSON + '-' + row.LAB_TECH
         completed.append(curr)
 
         

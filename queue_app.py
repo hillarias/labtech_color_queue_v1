@@ -35,12 +35,12 @@ for row in rows:
     else: 
         completed.append(curr)
 
-prog_header  = '<p style="font-family:Arial; color:Blue; font-size: 25px;">In Progress</p>'
+prog_header  = '<p style="font-family:Arial; color:Green; font-size: 25px;">In Progress</p>'
 st.markdown(prog_header, unsafe_allow_html=True)
 for entry in in_prog:
     st.write(entry)
 
-comp_header = '<p style="font-family:Arial; color:Red; font-size: 25px;">Completed</p>'
+comp_header = '<p style="font-family:Arial; color:Blue; font-size: 25px;">Completed</p>'
 st.markdown(comp_header, unsafe_allow_html = True)
 for entry in completed:
     st.write(entry)

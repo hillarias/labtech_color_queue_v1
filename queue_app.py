@@ -22,7 +22,7 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 st.image('https://ginsbergs.com/wp-content/uploads/2021/08/Beyond-Meat-Logo.png', width=300)
 st.header('Color Team Formulation Queue')
 
-
+received = []
 in_prog = []
 completed = []
 
@@ -30,11 +30,22 @@ completed = []
 for row in rows:
     
     curr = row.FORMULATION + " submitted by " + row.PERSON
-    if (row.COMPLETE == 'NO'): 
+    
+    if (row.RECEIVED == 'NO'):
+        received.append(cur)
+        
+    elif (row.COMPLETE == 'NO'): 
         in_prog.append(curr)
     else: 
         completed.append(curr)
 
+rec_header  = '<p style="font-family:Arial; color:Black; font-size: 25px;">Received</p>'
+st.markdown(rec_header, unsafe_allow_html=True)
+for entry in received:
+    st.write(entry)
+        
+        
+        
 prog_header  = '<p style="font-family:Arial; color:Green; font-size: 25px;">In Progress</p>'
 st.markdown(prog_header, unsafe_allow_html=True)
 for entry in in_prog:

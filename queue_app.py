@@ -51,6 +51,7 @@ for row in rows:
 col1, col2, col3 = st.columns(3)
 
 with col1:
+    st.image('https://flyclipart.com/thumb2/love-letter-mail-valentines-day-18511.png', width=300)
     rec_header  = '<p style="font-family:Arial; color: Grey;; font-size: 25px;">Received</p>'
     st.markdown(rec_header, unsafe_allow_html=True)
     for entry in received:

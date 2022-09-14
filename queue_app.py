@@ -39,7 +39,7 @@ for row in rows:
     else: 
         completed.append(curr)
 
-rec_header  = '<p style="font-family:Arial; color:Black; font-size: 25px;">Received</p>'
+rec_header  = '<p style="font-family:Arial; color:Grey; font-size: 25px;">Received</p>'
 st.markdown(rec_header, unsafe_allow_html=True)
 for entry in received:
     st.write(entry)

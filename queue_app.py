@@ -29,7 +29,7 @@ completed = []
 # Print results.
 for row in rows:
     
-    curr = row.FORMULATION + " submitted by ---> " + row.PERSON
+    curr = row.FORMULATION + " submitted by " + row.PERSON
     
     if (row.RECEIVED == 'NO'):
         received.append(curr)

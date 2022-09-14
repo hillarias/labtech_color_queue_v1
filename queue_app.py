@@ -25,4 +25,4 @@ st.header('Color Team Formulation Queue')
 for row in rows:
    
     
-   st.write(f"{row.FORMULATION} submitted by f"{row.PERSON_SUBMITTED})
+   st.write(f"{row.FORMULATION} submitted by f"{row.PERSON} )

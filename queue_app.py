@@ -34,11 +34,14 @@ for row in rows:
         in_prog.append(curr)
     else: 
         completed.append(curr)
-st.subheader('IN PROGRESS')
+
+prog_header  = '<p style="font-family:Arial; color:Blue; font-size: 20px;">In Progress</p>'
+st.markdown(prog_header, unsafe_allow_html=True)
 for entry in in_prog:
     st.write(entry)
 
-st.subheader('COMPLETE')
+completed_header = '<p style="font-family:Arial; color:Red; font-size: 20px;">Completed</p>'
+st.subheader(completed_header, unsafe_allow_html = True)
 for entry in completed:
     st.write(entry)
 

@@ -23,4 +23,4 @@ st.header('Beyond Meat Formulation Queue')
 
 # Print results.
 for row in rows:
-    st.write(row.name +  'has a' +  row.pet")
+    st.write(row.name +  'has a' +  row.pet)

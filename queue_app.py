@@ -33,11 +33,14 @@ for row in rows:
     curr = row.FORMULATION + " submitted by " + row.PERSON
     
     if (row.RECEIVED == 'NO'):
-        curr = str(rec_index) + ") " + row.FORMULATION + " submitted by " + row.PERSON + '-' + row.LAB_TECH
+        curr = str(rec_index) + ") " + row.FORMULATION + " submitted by " + row.PERSON 
         rec_index += 1
         received.append(curr)
+    
+    curr =  row.FORMULATION + " submitted by " + row.PERSON + '-' + row.LAB_TECH
         
     elif (row.COMPLETE == 'NO'): 
+        
         in_prog.append(curr)
     else: 
         completed.append(curr)

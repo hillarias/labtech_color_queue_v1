@@ -3,6 +3,8 @@
 import streamlit as st
 from gsheetsdb import connect
 
+st.set_page_config(layout="wide")
+
 # Create a connection object.
 conn = connect()
 
@@ -19,10 +21,9 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 st.image('https://ginsbergs.com/wp-content/uploads/2021/08/Beyond-Meat-Logo.png', width=300)
 st.header('Color Team Formulation Queue')
+st.subheader('In progress...')
 
 
 # Print results.
 for row in rows:
-   
-    
    st.write(row.FORMULATION + " submitted by " + row.PERSON) 

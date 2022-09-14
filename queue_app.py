@@ -23,4 +23,6 @@ st.header('Color Team Formulation Queue')
 
 # Print results.
 for row in rows:
-    st.write(row.FORMULATION +  ' submitted by ' +  row.PERSON_SUBMITTED + row.DATE_SUBMITTED)
+   
+    
+   st.write(f"{row.FORMULATION} submitted by :{row.PERSON_SUBMITTED}:")

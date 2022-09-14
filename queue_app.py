@@ -27,10 +27,9 @@ st.subheader('In progress...')
 
 # Print results.
 for row in rows:
-   if row.COMPLETED == 'NO': 
-    st.write(row.FORMULATION + " submitted by " + row.PERSON) 
-   
-   else: 
+    if (row.COMPLETE == 'NO'): 
+        st.write(row.FORMULATION + " submitted by " + row.PERSON) 
+    else: 
         st.subheader('COMPLETED')
         st.write(row.FORMULATION + " submitted by " + row.PERSON) 
         

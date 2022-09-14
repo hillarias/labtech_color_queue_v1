@@ -66,7 +66,7 @@ with col2:
    
 
 with col3:
-    comp_header = '<p style="font-family:helvetica; color:Blue; font-size: 25px;"><u>Completed</u></p>'
+    comp_header = '<p style="font-family:helvetica; color:royalblue; font-size: 25px;"><u>Completed</u></p>'
     st.markdown(comp_header, unsafe_allow_html = True)
     for entry in completed:
         st.write(entry)

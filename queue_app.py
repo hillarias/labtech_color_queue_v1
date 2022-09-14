@@ -52,20 +52,20 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     
-    rec_header  = '<p style="font-family:Arial; color: Maroon;; font-size: 25px;"><u>Received</u></p>'
+    rec_header  = '<p style="font-family:sans serif; color: Maroon;; font-size: 25px;"><u>Received</u></p>'
     st.markdown(rec_header, unsafe_allow_html=True)
     for entry in received:
         st.write(entry)
 
 with col2:
-    prog_header  = '<p style="font-family:Arial; color:Green; font-size: 25px;"><u>In Progress</u></p>'
+    prog_header  = '<p style="font-family:sans serif; color:Green; font-size: 25px;"><u>In Progress</u></p>'
     st.markdown(prog_header, unsafe_allow_html=True)
     for entry in in_prog:
         st.write(entry)
    
 
 with col3:
-    comp_header = '<p style="font-family:Arial; color:Blue; font-size: 25px;"><u>Completed</u></p>'
+    comp_header = '<p style="font-family:sans serif; color:Blue; font-size: 25px;"><u>Completed</u></p>'
     st.markdown(comp_header, unsafe_allow_html = True)
     for entry in completed:
         st.write(entry)

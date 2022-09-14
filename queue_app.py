@@ -40,11 +40,11 @@ for row in rows:
     
         
     elif row.COMPLETE == 'NO': 
-        curr =  row.FORMULATION + " submitted by " + row.PERSON + '-' + row.LAB_TECH
+        curr =  row.FORMULATION + " submitted by " + row.PERSON + ' - ' + row.LAB_TECH
         
         in_prog.append(curr)
     else: 
-        curr =  row.FORMULATION + " submitted by " + row.PERSON + '-' + row.LAB_TECH
+        curr =  row.FORMULATION + " submitted by " + row.PERSON + ' - ' + row.LAB_TECH
         completed.append(curr)
 
         

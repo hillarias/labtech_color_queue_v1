@@ -32,7 +32,7 @@ for row in rows:
     curr = row.FORMULATION + " submitted by " + row.PERSON
     
     if (row.RECEIVED == 'NO'):
-        received.append(cur)
+        received.append(curr)
         
     elif (row.COMPLETE == 'NO'): 
         in_prog.append(curr)

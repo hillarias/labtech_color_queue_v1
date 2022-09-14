@@ -33,7 +33,7 @@ for row in rows:
     curr = row.FORMULATION + " submitted by " + row.PERSON
     
     if (row.RECEIVED == 'NO'):
-        curr = rec_index + ") " + row.FORMULATION + " submitted by " + row.PERSON
+        curr = str(rec_index) + ") " + row.FORMULATION + " submitted by " + row.PERSON
         rec_index += 1
         received.append(curr)
         

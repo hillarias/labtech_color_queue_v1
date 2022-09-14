@@ -41,7 +41,7 @@ for entry in in_prog:
     st.write(entry)
 
 comp_header = '<p style="font-family:Arial; color:Red; font-size: 25px;">Completed</p>'
-st.subheader(comp_header, unsafe_allow_html = True)
+st.markdown(comp_header, unsafe_allow_html = True)
 for entry in completed:
     st.write(entry)
 

@@ -59,7 +59,7 @@ with col1:
         st.write(entry)
 
 with col2:
-    prog_header  = '<p style="font-family:helvetica; color:Green; font-size: 25px;"><u>In Progress</u></p>'
+    prog_header  = '<p style="font-family:helvetica; color:darkolivegreen; font-size: 25px;"><u>In Progress</u></p>'
     st.markdown(prog_header, unsafe_allow_html=True)
     for entry in in_prog:
         st.write(entry)

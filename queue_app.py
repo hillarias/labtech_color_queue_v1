@@ -25,6 +25,7 @@ st.header('Color Team Formulation Queue')
 received = []
 in_prog = []
 completed = []
+rec_index = 1
 
 # Print results.
 for row in rows:
@@ -32,6 +33,8 @@ for row in rows:
     curr = row.FORMULATION + " submitted by " + row.PERSON
     
     if (row.RECEIVED == 'NO'):
+        curr = rec_index + ") " + row.FORMULATION + " submitted by " + row.PERSON
+        rec_index += 1
         received.append(curr)
         
     elif (row.COMPLETE == 'NO'): 

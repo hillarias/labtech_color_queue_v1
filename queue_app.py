@@ -21,7 +21,7 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 st.image('https://ginsbergs.com/wp-content/uploads/2021/08/Beyond-Meat-Logo.png', width=300)
 st.header('Color Team Formulation Queue')
-st.subheader('In progress...')
+
 
 in_prog = []
 completed = []

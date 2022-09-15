@@ -113,7 +113,7 @@ if turnover_check:
     exp_count = 0
     for row in rows:
         if row.COMPLETE:
-            temp_turnover = days_between(row.DATE_RECEIVED,row.DATE_COMPLETED)
+            temp_turnover = days_between(str(row.DATE_RECEIVED),str(row.DATE_COMPLETED))
             turnover_count+= temp_turnover
             exp_count += 1
             

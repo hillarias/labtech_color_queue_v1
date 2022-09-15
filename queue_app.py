@@ -87,6 +87,7 @@ for row in rows:
 exp_count = pd.DataFrame(name_count.items(), columns=['Name', 'Exp_Count'])
 
 exp_chart = px.bar(exp_count, x = 'Name', y = 'Exp_Count', color = "Exp_Count", color_continuous_scale= 'Agsunset')
+exp_chart.update_layout(height=1080,width=1920)
 
 st.write('##')
 st.write('##')
@@ -95,5 +96,5 @@ st.write('##')
 queue_check = st.checkbox('Check here for queue summary data')
 if queue_check:
     st.header('Experiment Submission Count by Team Member')
-    st.plotly_chart(exp_chart,height=800)
+    st.write(exp_chart)
 

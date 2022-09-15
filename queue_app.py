@@ -86,9 +86,7 @@ for row in rows:
 
 exp_count = pd.DataFrame(name_count.items(), columns=['Name', 'Exp_Count'])
 
-px.bar(exp_count, x = 'Name', y = 'Exp_Count', color = "Exp_Count")
+exp_chart = px.bar(exp_count, x = 'Name', y = 'Exp_Count', color = "Exp_Count")
         
-        
-        
-
+st.write(exp_chart)
 

@@ -117,8 +117,8 @@ if turnover_check:
             turnover_count+= temp_turnover
             exp_count += 1
             
-    st.write('Number of Experiements Batched: '+ exp_count)
-    st.write('Average Turnover Once Received: ' + turnover_count/exp_count)
+    st.write('Number of Experiements Batched: '+ str(exp_count))
+    st.write('Average Turnover Once Received: ' + str(turnover_count/exp_count))
         
             
     

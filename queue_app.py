@@ -95,5 +95,5 @@ st.write('##')
 queue_check = st.checkbox('Check here for queue summary data')
 if queue_check:
     st.header('Experiment Submission Count by Team Member')
-    st.write(exp_chart)
+    st.plotly_chart(exp_chart,height=800)
 

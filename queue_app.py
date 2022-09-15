@@ -5,6 +5,7 @@ from gsheetsdb import connect
 import plotly
 import plotly.express as px
 import pandas as pd
+from datetime import datetime
 
 st.set_page_config(layout="wide")
 st.image('https://i.pinimg.com/originals/0a/2d/2c/0a2d2c61d0c678404f26a332ed015c38.png')
@@ -100,3 +101,29 @@ if queue_check:
     st.header('Experiment Submission Count by Team Member')
     st.write(exp_chart)
 
+def days_between(d1, d2):
+    d1 = datetime.strptime(d1, "%m/%d/%Y")
+    d2 = datetime.strptime(d2, "%m/%d/%Y")
+    return abs((d2 - d1).days)
+
+
+turnover_check = st.checkbox('Check here for experiment turnover statistics')
+if turnover_check:
+    turnover_count =  0 
+    exp_count = 0
+    for row in rows:
+        if row.COMPLETED:
+            temp_turnover = days_between(row.DATE_RECEIVED,row.DATE_COMPLETED)
+            turnover_count+= temp_turnover
+            exp_count += 1
+            
+    st.write('Number of Experiements Batched: '+ exp_count)
+    st.write('Average Turnover Once Received: ' + turnover_count/exp_count)
+        
+            
+    
+    
+    
+    
+    
+    

@@ -87,6 +87,10 @@ for row in rows:
 exp_count = pd.DataFrame(name_count.items(), columns=['Name', 'Exp_Count'])
 
 exp_chart = px.bar(exp_count, x = 'Name', y = 'Exp_Count', color = "Exp_Count")
-        
-st.write(exp_chart)
+
+
+queue_check = st.checkbox('Check here for queue summary data')
+if queue_check:
+    st.header('Experiment Submission Count by Team Member')
+    st.write(exp_chart)
 

@@ -2,6 +2,8 @@
 
 import streamlit as st
 from gsheetsdb import connect
+import plotly.express as px
+import pandas as pd
 
 st.set_page_config(layout="wide")
 st.image('https://i.pinimg.com/originals/0a/2d/2c/0a2d2c61d0c678404f26a332ed015c38.png')

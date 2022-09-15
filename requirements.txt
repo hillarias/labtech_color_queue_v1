@@ -1,3 +1,4 @@
 gsheetsdb
 plotly
+plotly.express
 pandas

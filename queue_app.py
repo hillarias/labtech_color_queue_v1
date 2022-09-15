@@ -74,7 +74,16 @@ with col3:
            
         
         
+name_count = {}
+for row in rows:
+    if row.PERSON_SUBMITTED in name_count.keys():
+        name_count[row.PERSON_SUBMITTED] += 1
+    else:
+        name_count[row.PERSON_SUBMITTED]= 1
 
+exp_count = pd.DataFrame(name_count.items(), columns=['Name', 'Exp_Count'])
+
+px.bar(exp_count, x = 'Name', y = 'Exp_Count', color = "Exp_Count")
         
         
         

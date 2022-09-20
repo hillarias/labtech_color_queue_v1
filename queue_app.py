@@ -74,8 +74,9 @@ with col3:
     st.markdown(comp_header, unsafe_allow_html = True)
     counter = -1
     for entry in range(10):
-        st.write(completed[counter])
-        counter -= 1
+        if completed[counter]:
+            st.write(completed[counter])
+            counter -= 1
 
            
         

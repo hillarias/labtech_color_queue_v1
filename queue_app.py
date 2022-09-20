@@ -29,7 +29,7 @@ st.header('Color Team Formulation Queue')
 
 received = []
 in_prog = []
-completed = [,,,,,,,,,,,,,,,,,,,]
+completed = ["","","","","","","","","","","",""]
 rec_index = 1
 
 # Print results.

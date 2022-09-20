@@ -29,7 +29,7 @@ st.header('Color Team Formulation Queue')
 
 received = []
 in_prog = []
-completed = []
+completed = [,,,,,,,,,,,,,,,,,,,]
 rec_index = 1
 
 # Print results.
@@ -74,9 +74,8 @@ with col3:
     st.markdown(comp_header, unsafe_allow_html = True)
     counter = -1
     for entry in range(10):
-        if completed[counter]:
-            st.write(completed[counter])
-            counter -= 1
+        st.write(completed[counter])
+        counter -= 1
 
            
         

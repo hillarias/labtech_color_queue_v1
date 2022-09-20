@@ -72,8 +72,10 @@ with col2:
 with col3:
     comp_header = '<p style="font-family:helvetica; color:royalblue; font-size: 30px;"><u>Completed</u></p>'
     st.markdown(comp_header, unsafe_allow_html = True)
-    for entry in completed:
-        st.write(entry)
+    counter = -1
+    for entry in range(10):
+        st.write(completed[counter])
+        counter -= 1
 
            
         

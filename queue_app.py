@@ -109,9 +109,7 @@ def days_between(d1, d2):
     d2 = datetime.strptime(d2, "%Y-%m-%d")
     return abs((d2 - d1).days)
 
-def days_between_v2(d1, d2):
-    d2 = datetime.strptime(d2, "%Y-%m-%d")
-    return abs((d2 - d1).days)
+
 
     
 tech_month_count = {}
@@ -122,19 +120,19 @@ for row in rows:
             else:
                 tech_month_count[row.LAB_TECH]= 1
         
-            if tech_month_count.in('EH/MH'):
+            if 'EH/MH' in tech_month_count:
                 tech_month_count['Emily'] += tech_month_count['EH/MH']
                 tech_month_count['Mala'] += tech_month_count['EH/MH']
             
-            if tech_month_count.in('EH/AA'):
+            if 'EH/AA' in tech_month_count::
                 tech_month_count['Emily'] += tech_month_count['EH/AA']
                 tech_month_count['Alexis'] += tech_month_count['EH/AA']
                 
-            if tech_month_count.in('AA/MH'):
+            if 'AA/MH' in tech_month_count::
                 tech_month_count['Alexis'] += tech_month_count['AA/MH']
                 tech_month_count['Mala'] += tech_month_count['AA/MH']
             
-            if tech_month_count.in('All'):
+            if 'All' in tech_month_count:
                 tech_month_count['Emily'] += tech_month_count['All']
                 tech_month_count['Mala'] += tech_month_count['All']
                 tech_month_count['Alexis'] += tech_month_count['All']

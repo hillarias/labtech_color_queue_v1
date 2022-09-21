@@ -118,7 +118,7 @@ tech_month_count = {}
 for row in rows:
     if row.COMPLETE == 'YES':
         if days_between(now,str(row.DATE_COMPLETED)) <= 30:
-                if row.LAB_TECH in name_count.keys():
+                if row.LAB_TECH in tech_month_count.keys():
                     tech_month_count[row.LAB_TECH] += 1
                 else:
                     tech_month_count[row.LAB_TECH]= 1

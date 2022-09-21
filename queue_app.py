@@ -148,9 +148,9 @@ cleaned_month = month_count[(month_count['Name'] == 'Emily') | (month_count['Nam
 
 month_exp_chart = px.bar(cleaned_month, x = 'Name', y = 'Monthly_Exp_Count', color = "Monthly_Exp_Count", color_continuous_scale= 'Aggrnyl')
 month_exp_chart.update_layout(width= 800,height = 500)
-month_exp_chart.update_layout(title='Monthly Experiment Count', title_x=0.45,
-                           legend_font_size=15)
-    
+month_exp_chart.update_layout(title='Monthly Experiment Count', title_x=0.45, legend_font_size=15)
+month_exp_chart.update_xaxes(title = 'Lab Tech')
+month_exp_chart.update_yaxes(title = 'Experiment Count')
 
 
 month_check = st.checkbox('Check here for monthly experiment statistics')

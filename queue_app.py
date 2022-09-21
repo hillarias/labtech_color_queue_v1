@@ -111,7 +111,7 @@ def days_between(d1, d2):
 
 
 today = date.today()
-now = today.strftime("%Y/%m/%d")
+now = today.strftime("%Y-%m-%d")
 
     
 tech_month_count = {}

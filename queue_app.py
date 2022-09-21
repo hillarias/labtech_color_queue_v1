@@ -115,7 +115,7 @@ now = today.strftime("%m/%d%/%Y")
     
 tech_month_count = {}
 for row in rows:
-    if days_between(now,row.DATE_COMPLETED) <= 30
+    if days_between(now,row.DATE_COMPLETED) <= 30:
             if row.LAB_TECH in name_count.keys():
                 tech_month_count[row.LAB_TECH] += 1
             elif:

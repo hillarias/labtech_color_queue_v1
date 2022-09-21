@@ -118,7 +118,7 @@ for row in rows:
     if days_between(now,row.DATE_COMPLETED) <= 30:
             if row.LAB_TECH in name_count.keys():
                 tech_month_count[row.LAB_TECH] += 1
-            elif:
+            else:
                 tech_month_count[row.LAB_TECH]= 1
         
             if tech_month_count.has_key('EH/MH'):

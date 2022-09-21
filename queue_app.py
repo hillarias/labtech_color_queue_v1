@@ -110,12 +110,14 @@ def days_between(d1, d2):
     return abs((d2 - d1).days)
 
 
+today = date.today()
+now = today.strftime("%Y/%m%/%d")
 
     
 tech_month_count = {}
 for row in rows:
     if row.COMPLETE == 'YES':
-        if days_between(str(date.today()),str(row.DATE_COMPLETED)) <= 30:
+        if days_between(now,str(row.DATE_COMPLETED)) <= 30:
                 if row.LAB_TECH in name_count.keys():
                     tech_month_count[row.LAB_TECH] += 1
                 else:

@@ -122,19 +122,19 @@ for row in rows:
             else:
                 tech_month_count[row.LAB_TECH]= 1
         
-            if tech_month_count.has_key('EH/MH'):
+            if tech_month_count.in('EH/MH'):
                 tech_month_count['Emily'] += tech_month_count['EH/MH']
                 tech_month_count['Mala'] += tech_month_count['EH/MH']
             
-            if tech_month_count.has_key('EH/AA'):
+            if tech_month_count.in('EH/AA'):
                 tech_month_count['Emily'] += tech_month_count['EH/AA']
                 tech_month_count['Alexis'] += tech_month_count['EH/AA']
                 
-            if tech_month_count.has_key('AA/MH'):
+            if tech_month_count.in('AA/MH'):
                 tech_month_count['Alexis'] += tech_month_count['AA/MH']
                 tech_month_count['Mala'] += tech_month_count['AA/MH']
             
-            if tech_month_count.has_key('All'):
+            if tech_month_count.in('All'):
                 tech_month_count['Emily'] += tech_month_count['All']
                 tech_month_count['Mala'] += tech_month_count['All']
                 tech_month_count['Alexis'] += tech_month_count['All']

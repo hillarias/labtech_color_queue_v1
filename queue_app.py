@@ -155,6 +155,7 @@ month_exp_chart.update_layout(title='Monthly Experiment Count', title_x=0.45,
 
 month_check = st.checkbox('Check here for monthly experiment statistics')
 if month_check:
+    st.header('Monthly Formulation Totals - Example Month')
     st.write(month_exp_chart)
 
 

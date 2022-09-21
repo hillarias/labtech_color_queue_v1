@@ -90,7 +90,7 @@ for row in rows:
 
 exp_count = pd.DataFrame(name_count.items(), columns=['Name', 'Exp_Count'])
 
-exp_chart = px.bar(exp_count, x = 'Name', y = 'Exp_Count', color = "Exp_Count", color_continuous_scale= 'Agsunset')
+exp_chart = px.bar(exp_count, x = 'Name', y = 'Exp_Count', color = "Exp_Count", color_continuous_scale= 'RdBu')
 exp_chart.update_layout(width= 800,height = 500)
 exp_chart.update_layout(title='Experiment Count', title_x=0.45,
                        legend_font_size=15)

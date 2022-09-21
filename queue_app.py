@@ -141,7 +141,7 @@ for row in rows:
 
 
     month_count = pd.DataFrame(tech_month_count.items(), columns=['Name', 'Monthly_Exp_Count'])
-    cleaned_month = month_count[(month_count['Name'] == 'Emily') or (month_count['Name'] == 'Alexis') or (month_count['Name'] == 'Mala')]
+    cleaned_month = month_count[(month_count['Name'] == 'Emily') | (month_count['Name'] == 'Alexis') | (month_count['Name'] == 'Mala')]
 
     month_exp_chart = px.bar(cleaned_month, x = 'Name', y = 'Exp_Count', color = "Exp_Count", color_continuous_scale= 'Agsunset')
     month_exp_chart.update_layout(width= 800,height = 500)

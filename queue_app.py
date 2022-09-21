@@ -126,18 +126,18 @@ for row in rows:
                     tech_month_count['Emily'] += tech_month_count['EH/MH']
                     tech_month_count['Mala'] += tech_month_count['EH/MH']
 
-                if 'EH/AA' in tech_month_count:
+        if 'EH/AA' in tech_month_count:
                     tech_month_count['Emily'] += tech_month_count['EH/AA']
-                    tech_month_count['Alexis'] += tech_month_count['EH/AA']
+                    tech_month_count['Alexis'] += tech_month_count['EH/AA']        
 
-                if 'AA/MH' in tech_month_count:
+        if 'AA/MH' in tech_month_count:
                     tech_month_count['Alexis'] += tech_month_count['AA/MH']
-                    tech_month_count['Mala'] += tech_month_count['AA/MH']
+                    tech_month_count['Mala'] += tech_month_count['AA/MH']        
 
-                if 'All' in tech_month_count:
+        if 'All' in tech_month_count:
                     tech_month_count['Emily'] += tech_month_count['All']
                     tech_month_count['Mala'] += tech_month_count['All']
-                    tech_month_count['Alexis'] += tech_month_count['All']
+                    tech_month_count['Alexis'] += tech_month_count['All']        
 
                 
 

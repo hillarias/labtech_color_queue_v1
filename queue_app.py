@@ -114,7 +114,7 @@ today = date.today()
 now = today.strftime("%Y-%m-%d")
 
     
-tech_month_count = {}
+tech_month_count = {'Emily':0,'Alexis':0,'Mala':0}
 for row in rows:
     if row.COMPLETE == 'YES':
         if days_between(now,str(row.DATE_COMPLETED)) <= 30:

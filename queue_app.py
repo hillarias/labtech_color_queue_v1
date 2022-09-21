@@ -114,7 +114,7 @@ def days_between(d1, d2):
     
 tech_month_count = {}
 for row in rows:
-    if days_between(str(date.today()).strftime('%Y-%m-%d'),row.DATE_COMPLETED) <= 30:
+    if days_between(str(date.today()),row.DATE_COMPLETED) <= 30:
             if row.LAB_TECH in name_count.keys():
                 tech_month_count[row.LAB_TECH] += 1
             else:

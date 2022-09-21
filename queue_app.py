@@ -6,6 +6,7 @@ import plotly
 import plotly.express as px
 import pandas as pd
 from datetime import datetime
+from datetime import date
 
 st.set_page_config(layout="wide")
 st.image('https://i.pinimg.com/originals/0a/2d/2c/0a2d2c61d0c678404f26a332ed015c38.png')

@@ -122,34 +122,35 @@ for row in rows:
                     tech_month_count[row.LAB_TECH] += 1
                 else:
                     tech_month_count[row.LAB_TECH]= 1
-    if 'EH/MH' in tech_month_count.keys():
+               
+if 'EH/MH' in tech_month_count.keys():
                     tech_month_count['Emily'] += tech_month_count['EH/MH']
                     tech_month_count['Mala'] += tech_month_count['EH/MH']     
 
-    if 'EH/AA' in tech_month_count.keys():
+if 'EH/AA' in tech_month_count.keys():
                     tech_month_count['Emily'] += tech_month_count['EH/AA']
-                    tech_month_count['Alexis'] += tech_month_count['EH/AA']            
-
-    if 'AA/MH' in tech_month_count.keys():
+                    tech_month_count['Alexis'] += tech_month_count['EH/AA']  
+            
+if 'AA/MH' in tech_month_count.keys():
                     tech_month_count['Alexis'] += tech_month_count['AA/MH']
-                    tech_month_count['Mala'] += tech_month_count['AA/MH']            
-
-    if 'ALL' in tech_month_count.keys():
+                    tech_month_count['Mala'] += tech_month_count['AA/MH']             
+  
+if 'ALL' in tech_month_count.keys():
                     tech_month_count['Emily'] += tech_month_count['ALL']
                     tech_month_count['Mala'] += tech_month_count['ALL']
-                    tech_month_count['Alexis'] += tech_month_count['ALL']            
+                    tech_month_count['Alexis'] += tech_month_count['ALL'] 
+                    
+    
 
-                
 
+month_count = pd.DataFrame(tech_month_count.items(), columns=['Name', 'Monthly_Exp_Count'])
+cleaned_month = month_count[(month_count['Name'] == 'Emily') | (month_count['Name'] == 'Alexis') | (month_count['Name'] == 'Mala')]
 
-
-    month_count = pd.DataFrame(tech_month_count.items(), columns=['Name', 'Monthly_Exp_Count'])
-    cleaned_month = month_count[(month_count['Name'] == 'Emily') | (month_count['Name'] == 'Alexis') | (month_count['Name'] == 'Mala')]
-
-    month_exp_chart = px.bar(cleaned_month, x = 'Name', y = 'Monthly_Exp_Count', color = "Monthly_Exp_Count", color_continuous_scale= 'Agsunset')
-    month_exp_chart.update_layout(width= 800,height = 500)
-    month_exp_chart.update_layout(title='Monthly Experiment Count', title_x=0.45,
+month_exp_chart = px.bar(cleaned_month, x = 'Name', y = 'Monthly_Exp_Count', color = "Monthly_Exp_Count", color_continuous_scale= 'Agsunset')
+month_exp_chart.update_layout(width= 800,height = 500)
+month_exp_chart.update_layout(title='Monthly Experiment Count', title_x=0.45,
                            legend_font_size=15)
+    
 
 
 month_check = st.checkbox('Check here for monthly experiment statistics')
